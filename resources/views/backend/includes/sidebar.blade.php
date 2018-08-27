@@ -1,9 +1,9 @@
 <div class="sidebar">
     <nav class="sidebar-nav">
 
-        {!! $admin_sidebar->asUl( ['class' => 'nav'], ['class' => 'nav-dropdown-items'] ) !!}
+    {!! $admin_sidebar->asUl( ['class' => 'nav'], ['class' => 'nav-dropdown-items'] ) !!}
 
-        <!-- <ul class="nav">
+    <!-- <ul class="nav">
 
             <li class="nav-item">
                 <a class="nav-link {{ active_class(Active::checkUriPattern('admin/dashboard')) }}" href="{{ route('backend.dashboard') }}"><i class="icon-speedometer"></i> Dashboard <span class="badge badge-primary">NEW</span></a>
@@ -12,10 +12,10 @@
                 Modules
             </li>
             <?php $articles_uri_paterns = [
-                'admin/posts/*',
-                'admin/categories/*',
-                'admin/tags/*',
-            ]; ?>
+        'admin/posts/*',
+        'admin/categories/*',
+        'admin/tags/*',
+    ]; ?>
             <li class="nav-item nav-dropdown {{ active_class(if_uri_pattern($articles_uri_paterns), 'open') }}">
                 <a class="nav-link nav-dropdown-toggle" href="#"><i class="fas fa-file"></i> Articles</a>
                 <ul class="nav-dropdown-items">
@@ -41,9 +41,9 @@
                 Access Management
 
                 <?php $ccess_uri_paterns = [
-                    'admin/users/*',
-                    'admin/roles/*',
-                ]; ?>
+        'admin/users/*',
+        'admin/roles/*',
+    ]; ?>
             </li>
             <li class="nav-item nav-dropdown {{ active_class(if_uri_pattern($ccess_uri_paterns), 'open') }}">
                 <a class="nav-link nav-dropdown-toggle" href="#"><i class="icon-key"></i> Access Control</a>

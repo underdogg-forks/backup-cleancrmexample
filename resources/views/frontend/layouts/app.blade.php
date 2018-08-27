@@ -2,31 +2,32 @@
 <html lang="{{ app()->getLocale() }}">
 
 <head>
-    <meta charset="utf-8" />
+    <meta charset="utf-8"/>
     <link rel="apple-touch-icon" sizes="76x76" href="{{asset('img/favicon.png')}}">
     <link rel="icon" type="image/png" href="{{asset('img/favicon.png')}}">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
     <title>{{ config('app.name', 'Laravel') }}</title>
-    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no'
+          name='viewport'/>
     <meta name="description" content="Laravel Starter Application. A boilarplate to all type of application.">
     <meta name="author" content="Nasir Khan Saikat http://nasirkhn.com">
 
     <link rel="shortcut icon" href="/img/favicon.png">
-    <link type="text/plain" rel="author" href="{{asset('humans.txt')}}" />
+    <link type="text/plain" rel="author" href="{{asset('humans.txt')}}"/>
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    @stack('before-styles')
+@stack('before-styles')
 
-    <!--     Fonts and icons     -->
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
+<!--     Fonts and icons     -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css"/>
 
     <!-- CSS Files -->
-    <!-- <link href="{{asset('css/bootstrap.min.css')}}" rel="stylesheet" /> -->
-    <link href="{{asset('vendor/now-ui-kit/css/bootstrap.min.css')}}" rel="stylesheet" />
-    <link href="{{asset('vendor/now-ui-kit/css/now-ui-kit.css?v=1.1.0')}}" rel="stylesheet" />
+<!-- <link href="{{asset('css/bootstrap.min.css')}}" rel="stylesheet" /> -->
+    <link href="{{asset('vendor/now-ui-kit/css/bootstrap.min.css')}}" rel="stylesheet"/>
+    <link href="{{asset('vendor/now-ui-kit/css/now-ui-kit.css?v=1.1.0')}}" rel="stylesheet"/>
     <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
     <link href="{{asset('plugins/fontawesome/css/fontawesome-all.min.css')}}" rel="stylesheet">
 
@@ -36,40 +37,43 @@
 
 <body class="{{$body_class}} sidebar-collapse">
 
-    <script>
-        window.fbAsyncInit = function() {
-            FB.init({
-                appId      : '569561286532601',
-                cookie     : true,
-                xfbml      : true,
-                version    : '2.12'
-            });
+<script>
+    window.fbAsyncInit = function () {
+        FB.init({
+            appId: '569561286532601',
+            cookie: true,
+            xfbml: true,
+            version: '2.12'
+        });
 
-            FB.AppEvents.logPageView();
-        };
+        FB.AppEvents.logPageView();
+    };
 
-        (function(d, s, id){
-            var js, fjs = d.getElementsByTagName(s)[0];
-            if (d.getElementById(id)) {return;}
-            js = d.createElement(s); js.id = id;
-            js.src = "https://connect.facebook.net/en_US/sdk.js";
-            fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));
-    </script>
+    (function (d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) {
+            return;
+        }
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "https://connect.facebook.net/en_US/sdk.js";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+</script>
 
-    <!-- Header Block -->
-    @include('frontend.includes.header')
-    <!-- / Header Block -->
+<!-- Header Block -->
+@include('frontend.includes.header')
+<!-- / Header Block -->
 
-    <div class="wrapper">
+<div class="wrapper">
 
 
-        @yield('content')
+@yield('content')
 
-        <!-- Footer block -->
-        @include('frontend.includes.footer')
-        <!-- / Footer block -->
-    </div>
+<!-- Footer block -->
+@include('frontend.includes.footer')
+<!-- / Footer block -->
+</div>
 </body>
 
 <!-- Scripts -->
@@ -92,7 +96,7 @@
     var fixed_section;
     var floating = false;
 
-    $(document).ready(function() {
+    $(document).ready(function () {
         suggestions_distance = $("#suggestions").offset();
         pay_height = $('.fixed-section').outerHeight();
 

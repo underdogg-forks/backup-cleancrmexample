@@ -9,7 +9,7 @@
     <meta name="author" content="Nasir Khan Saikat http://nasirkhn.com">
     <meta name="keyword" content="Laravel,Laravel starter,Bootstrap,Admin,Template,Open,Source">
     <link rel="shortcut icon" href="/img/favicon.png">
-    <link type="text/plain" rel="author" href="{{asset('humans.txt')}}" />
+    <link type="text/plain" rel="author" href="{{asset('humans.txt')}}"/>
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
@@ -59,78 +59,78 @@
 
 <body class="app header-fixed sidebar-fixed aside-menu-fixed aside-menu-hidden">
 
-    <!-- Header Block -->
-    @include('backend.includes.header')
-    <!-- / Header Block -->
+<!-- Header Block -->
+@include('backend.includes.header')
+<!-- / Header Block -->
 
-    <div class="app-body">
+<div class="app-body">
 
-        <!-- Sidebar -->
-        @include('backend.includes.sidebar')
-        <!-- /Sidebar -->
+    <!-- Sidebar -->
+@include('backend.includes.sidebar')
+<!-- /Sidebar -->
 
-        <!-- Main content -->
-        <main class="main">
+    <!-- Main content -->
+    <main class="main">
 
-            <!-- Breadcrumb -->
-            <ol class="breadcrumb">
-                @yield('breadcrumbs')
+        <!-- Breadcrumb -->
+        <ol class="breadcrumb">
+        @yield('breadcrumbs')
 
-                <!-- Breadcrumb Menu-->
-                <li class="breadcrumb-menu d-md-down-none">
-                    <div class="btn-group" role="group" aria-label="Button group">
-                        <a class="btn" href="#"><i class="icon-speech"></i></a>
-                        <a class="btn" href="{{ route('backend.users.profile') }}">
-                            <i class="fas fa-user"></i> &nbsp;Profile
-                        </a>
-                    </div>
-                </li>
-            </ol>
-
-
-            <div class="container-fluid">
-
-                <div class="animated fadeIn">
-
-                    @include('flash::message')
-
-                    <!-- Errors block -->
-                    @include('backend.includes.errors')
-                    <!-- / Errors block -->
-
-                    @yield('content')
-
+        <!-- Breadcrumb Menu-->
+            <li class="breadcrumb-menu d-md-down-none">
+                <div class="btn-group" role="group" aria-label="Button group">
+                    <a class="btn" href="#"><i class="icon-speech"></i></a>
+                    <a class="btn" href="{{ route('backend.users.profile') }}">
+                        <i class="fas fa-user"></i> &nbsp;Profile
+                    </a>
                 </div>
-                <!-- / animated fadeIn -->
+            </li>
+        </ol>
+
+
+        <div class="container-fluid">
+
+            <div class="animated fadeIn">
+
+            @include('flash::message')
+
+            <!-- Errors block -->
+            @include('backend.includes.errors')
+            <!-- / Errors block -->
+
+                @yield('content')
 
             </div>
-            <!-- /.conainer-fluid -->
-        </main>
+            <!-- / animated fadeIn -->
 
-        <!-- aside block -->
-        @include('backend.includes.aside')
-        <!-- / aside block -->
+        </div>
+        <!-- /.conainer-fluid -->
+    </main>
+
+    <!-- aside block -->
+@include('backend.includes.aside')
+<!-- / aside block -->
 
 
-    </div>
+</div>
 
-    <!-- Footer block -->
-    @include('backend.includes.footer')
-    <!-- / Footer block -->
+<!-- Footer block -->
+@include('backend.includes.footer')
+<!-- / Footer block -->
 
-    <!-- Scripts -->
-    @stack('before-scripts')
+<!-- Scripts -->
+@stack('before-scripts')
 
-    <script src="{{ mix('js/app_backend.js') }}"></script>
+<script src="{{ mix('js/app_backend.js') }}"></script>
 
-    <script type="text/javascript">
+<script type="text/javascript">
     $(function () {
         $('[data-toggle="tooltip"]').tooltip()
     })
 
     $('#flash-overlay-modal').modal();
-    </script>
+</script>
 
-    @stack('after-scripts')
+@stack('after-scripts')
 </body>
 </html>

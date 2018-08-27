@@ -13,27 +13,27 @@
                     </a>
                 </li>
                 @guest
-                <li>
-                    <a href="{{ route('frontend.auth.register') }}">
-                        Register
-                    </a>
-                </li>
-                <li>
-                    <a href="{{ route('frontend.auth.login') }}">
-                        Login
-                    </a>
-                </li>
+                    <li>
+                        <a href="{{ route('frontend.auth.register') }}">
+                            Register
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ route('frontend.auth.login') }}">
+                            Login
+                        </a>
+                    </li>
                 @else
-                <li>
-                    <a href="#">
-                        {{ Auth::user()->name }}
-                    </a>
-                </li>
-                <li>
-                    <a href="{{ route('frontend.auth.logout') }}">
-                        Logout
-                    </a>
-                </li>
+                    <li>
+                        <a href="#">
+                            {{ Auth::user()->name }}
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ route('frontend.auth.logout') }}">
+                            Logout
+                        </a>
+                    </li>
                 @endguest
             </ul>
         </nav>

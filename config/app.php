@@ -166,7 +166,13 @@ return [
         /*
          * Package Service Providers...
          */
-        Laravel\Tinker\TinkerServiceProvider::class,
+        //Barryvdh\Debugbar\ServiceProvider::class,
+        Laracasts\Flash\FlashServiceProvider::class,
+        //Laravel\Socialite\SocialiteServiceProvider::class,
+        //Spatie\Permission\PermissionServiceProvider::class,
+        //Spatie\Html\HtmlServiceProvider::class,
+        Laratrust\LaratrustServiceProvider::class,
+        Lavary\Menu\ServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -225,6 +231,13 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
+
+
+        //'Html'         => Spatie\Html\Facades\Html::class,
+        //'Debugbar'     => Barryvdh\Debugbar\Facade::class,
+        //'Socialite'    => Laravel\Socialite\Facades\Socialite::class,
+        'Laratrust' => Laratrust\LaratrustFacade::class,
+        'Menu'      => Lavary\Menu\Facade::class,
 
     ],
 
