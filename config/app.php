@@ -173,6 +173,8 @@ return [
         //Spatie\Html\HtmlServiceProvider::class,
         Laratrust\LaratrustServiceProvider::class,
         Lavary\Menu\ServiceProvider::class,
+        HieuLe\Active\ActiveServiceProvider::class,
+
 
         /*
          * Application Service Providers...
@@ -232,7 +234,7 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
 
-
+        'Active' => HieuLe\Active\Facades\Active::class,
         //'Html'         => Spatie\Html\Facades\Html::class,
         //'Debugbar'     => Barryvdh\Debugbar\Facade::class,
         //'Socialite'    => Laravel\Socialite\Facades\Socialite::class,
