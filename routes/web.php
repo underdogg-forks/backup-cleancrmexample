@@ -11,6 +11,32 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+/*
+*
+* Frontend Routes
+*
+* --------------------------------------------------------------------
+*/
+Route::group(['namespace' => 'Frontend', 'as' => 'frontend.'], function () {
+    include_once(__DIR__.'/frontend/auth.php');
+    include_once(__DIR__.'/frontend/frontend_routes.php');
 });
+
+/*
+*
+* Backend Routes
+*
+* --------------------------------------------------------------------
+*/
+Route::group(['namespace' => 'Backend', 'prefix' => 'admin', 'as' => 'backend.', 'middleware' => ['auth', 'can:view_backend']], function () {
+    /*
+    * These routes need view-backend permission
+    * (good if you want to allow more than one group in the backend,
+    * then limit the backend features by different roles or permissions)
+    *
+    * Note: Administrator has all permissions so you do not have to specify the administrator role everywhere.
+    */
+
+    include_once(__DIR__.'/backend/backend_routes.php');
+});
+
